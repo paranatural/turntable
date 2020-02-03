@@ -1,0 +1,42 @@
+{
+  "name": "@ghostship/site",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Extendable SPA router - documentation site",
+  "author": {
+    "name": "unordinarity",
+    "email": "unordinarity@yandex.ru"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unordinarity/ghostship"
+  },
+  "bugs": {
+    "url": "https://github.com/unordinarity/ghostship/issues",
+    "email": "unordinarity@yandex.ru"
+  },
+  "homepage": "https://github.com/unordinarity/ghostship",
+  "scripts": {
+    "build": "npx tsc",
+    "test": "npx eslint src/** && npx jest"
+  },
+  "dependencies": {
+    "@ghostship/core": "file:../core",
+    "@ghostship/react": "file:../react",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}
