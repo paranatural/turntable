@@ -1,6 +1,6 @@
 {
   "name": "@ghostship/react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Extendable SPA router - react bridge",
   "author": {
     "name": "unordinarity",
