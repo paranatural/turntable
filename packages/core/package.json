@@ -6,6 +6,9 @@
     "name": "unordinarity",
     "email": "unordinarity@yandex.ru"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "ghostship",
     "router",
