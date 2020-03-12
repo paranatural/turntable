@@ -22,13 +22,11 @@ export const Anchor: FunctionComponent<AnchorProps> = ({
   }, [Ghostship])
 
   // todo: route equality method
-  // eslint-disable-next-line
   const isCurrent = useMemo(() => {
     return true
   }, [Ghostship])
 
   // todo: library-free absolute/relative url detecting method
-  // eslint-disable-next-line
   const isAbsolute = useMemo(() => {
     if (href !== undefined) return true
   }, [href])

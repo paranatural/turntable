@@ -1,4 +1,5 @@
 {
+  "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2020,
@@ -6,13 +7,20 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "project": "./tsconfig.json"
+    "tsconfigRootDir": ".",
+    "project": ["./tsconfig.json"]
   },
   "extends": [
-    "eslint-config-standard-with-typescript"
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint/eslint-plugin"
   ],
   "rules": {
-    "@typescript-eslint/no-unused-vars": ["off"],
-    "@typescript-eslint/no-unused-vars-experimental": ["error"]
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars-experimental": "warn",
+    "no-unused-vars": "off"
   }
 }

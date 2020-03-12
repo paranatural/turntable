@@ -1,12 +1,12 @@
 interface UriBlocks {
-  scheme?: string
-  hostname?: string
-  ip?: string
-  port?: string
-  authority?: string
-  path?: string
-  query?: string
-  fragment?: string
+  scheme?: string;
+  hostname?: string;
+  ip?: string;
+  port?: string;
+  authority?: string;
+  path?: string;
+  query?: string;
+  fragment?: string;
 }
 
 export type UriParse = (uri: string) => UriBlocks

@@ -4,7 +4,7 @@ import { Ghostship } from '@ghostship/core'
 import { ghostshipContext } from './context'
 
 export interface GhostshipComponentProps {
-  instance: Ghostship
+  instance: Ghostship;
 }
 
 export const GhostshipComponent: FunctionComponent<GhostshipComponentProps> = ({

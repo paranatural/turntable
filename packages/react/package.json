@@ -7,7 +7,8 @@
     "email": "unordinarity@yandex.ru"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "directory": "pkg"
   },
   "keywords": [
     "ghostship",
@@ -33,7 +34,8 @@
   ],
   "scripts": {
     "build": "pika build",
-    "test": "npx eslint src/** && npx jest"
+    "format": "npx eslint src/** --fix",
+    "test": "npx jest"
   },
   "peerDependencies": {
     "@ghostship/core": "file:../core",

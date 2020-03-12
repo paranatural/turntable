@@ -1,15 +1,15 @@
 import { uriBuild, uriParse } from './uri-tools'
 
 export interface Route {
-  path: string
-  nested?: Route
-  middlewares?: Middleware[],
+  path: string;
+  nested?: Route;
+  middlewares?: Middleware[];
 }
 
 export interface HistoryState {
-  path?: string
-  query?: string
-  hash?: string
+  path?: string;
+  query?: string;
+  hash?: string;
 }
 
 export type Middleware = (
@@ -19,17 +19,17 @@ export type Middleware = (
 ) => HistoryState | boolean
 
 export interface Options {
-  trailingSlash?: boolean
-  parse?: (state: string) => HistoryState
-  stringify?: (state: HistoryState) => string
-  match?: (template: string, path: string) => boolean
+  trailingSlash?: boolean;
+  parse?: (state: string) => HistoryState;
+  stringify?: (state: HistoryState) => string;
+  match?: (template: string, path: string) => boolean;
 }
 
 interface StrictOptions {
-  trailingSlash: boolean
-  parse: (state: string) => HistoryState
-  stringify: (state: HistoryState) => string
-  match: (template: string, path: string) => boolean
+  trailingSlash: boolean;
+  parse: (state: string) => HistoryState;
+  stringify: (state: HistoryState) => string;
+  match: (template: string, path: string) => boolean;
 }
 
 const defaultOptions: StrictOptions = {
