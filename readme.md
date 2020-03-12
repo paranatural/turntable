@@ -2,7 +2,7 @@
 
 Configurable SPA router
 
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/ghostship/core)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/ghostship/core)](https://bundlephobia.com/result?p=@ghostship/core)
 
 # Features
 
@@ -10,7 +10,7 @@ Configurable SPA router
 - Written in [TypeScript](https://github.com/microsoft/TypeScript)
 - Zero-dependency
 - Batteries included (in a separate [package](./packages/stdlib), but it's officially supported)
-- Really lightweight [(<3kb min+gzip)](https://bundlephobia.com)
+- Really lightweight [(<3kb min+gzip)](https://bundlephobia.com/result?p=@ghostship/core)
 
 # Usage
 
