@@ -25,11 +25,13 @@
     "email": "unordinarity@yandex.ru"
   },
   "homepage": "https://github.com/unordinarity/ghostship",
-  "type": "module",
-  "module": "dist/index.js",
-  "main": "dist/index.js",
+  "files": [
+    "pkg",
+    "LICENSE",
+    "readme.md"
+  ],
   "scripts": {
-    "build": "npx tsc",
+    "build": "pika build",
     "test": "npx eslint src/** && npx jest"
   },
   "peerDependencies": {
@@ -46,5 +48,12 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "typescript": "^3.7.5"
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-ts-standard-pkg"
+      ]
+    ]
   }
 }

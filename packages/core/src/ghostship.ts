@@ -16,7 +16,7 @@ export type Middleware = (
   prevState: HistoryState,
   stateDelta: HistoryState,
   nextState: HistoryState
-) => boolean
+) => HistoryState | boolean
 
 export interface Options {
   trailingSlash?: boolean

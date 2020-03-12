@@ -1,4 +1,11 @@
-pkg
+### Project-specific
+
+# Lockfiles
+yarn.lock
+package-lock.json
+
+# Build files
+pkg/
 
 # Created by .ignore support plugin (hsz.mobi)
 ### SublimeText template
