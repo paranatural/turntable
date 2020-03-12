@@ -1,6 +1,6 @@
 {
   "name": "@ghostship/core",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Extendable SPA router",
   "author": {
     "name": "unordinarity",
@@ -68,7 +68,9 @@
   },
   "@pika/pack": {
     "pipeline": [
-      ["@pika/plugin-ts-standard-pkg"]
+      [
+        "@pika/plugin-ts-standard-pkg"
+      ]
     ]
   }
 }

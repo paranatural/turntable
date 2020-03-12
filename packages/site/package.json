@@ -1,6 +1,6 @@
 {
   "name": "@ghostship/site",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "description": "Extendable SPA router - documentation site",
   "author": {
@@ -22,8 +22,8 @@
     "test": "npx eslint src/** && npx jest"
   },
   "dependencies": {
-    "@ghostship/core": "^0.0.2",
-    "@ghostship/react": "^0.0.2",
+    "@ghostship/core": "^0.0.3",
+    "@ghostship/react": "^0.0.3",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
