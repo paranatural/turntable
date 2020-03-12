@@ -1,39 +1,38 @@
 import { uriBuild, uriParse } from './uri-tools'
 
-type Route = {
+export interface Route {
   path: string
-  nested?: Route[]
-  middlewares?: Middleware[]
+  nested?: Route
+  middlewares?: Middleware[],
 }
 
-type HistoryState = {
+export interface HistoryState {
   path?: string
   query?: string
   hash?: string
 }
 
-type StrictHistoryState = {
-  path: string
-  query: string
-  hash: string
-}
-
-export type Middleware = (delta: HistoryState) => boolean
-
-type Subscription = (
-  prevState: StrictHistoryState,
+export type Middleware = (
+  prevState: HistoryState,
   stateDelta: HistoryState,
-  nextState: StrictHistoryState
-) => void
+  nextState: HistoryState
+) => boolean
 
-type Options = {
+export interface Options {
   trailingSlash?: boolean
   parse?: (state: string) => HistoryState
   stringify?: (state: HistoryState) => string
   match?: (template: string, path: string) => boolean
 }
 
-const defaultOptions: Options = {
+interface StrictOptions {
+  trailingSlash: boolean
+  parse: (state: string) => HistoryState
+  stringify: (state: HistoryState) => string
+  match: (template: string, path: string) => boolean
+}
+
+const defaultOptions: StrictOptions = {
   trailingSlash: false,
   parse: state => {
     const uriResults = uriParse(state)
@@ -47,118 +46,69 @@ const defaultOptions: Options = {
     path: state.path,
     query: state.query,
     fragment: state.hash
-  })
+  }),
+  match: (template, path) => (template === path)
 }
 
 export class Ghostship {
-  private routes: Route[] = []
-  private options: Options = {}
-  private middlewares: Middleware[] = []
-  private isWorking: boolean = false
-  private subscriptions: Subscription[] = []
-  private currentHistoryState: StrictHistoryState
+  private routes: Route[]
+  private options: StrictOptions
+  private middlewares: Middleware[]
+  private currentHistoryState: HistoryState
 
   constructor (routes: Route[], options: Options, middlewares: Middleware[]) {
     this.routes = routes
     this.options = Object.assign({}, defaultOptions, options)
     this.middlewares = middlewares || []
-    this.subscriptions = []
-    this.currentHistoryState = {
-      hash: window.location.hash,
-      query: window.location.search,
-      path: window.location.pathname
-    }
+    this.currentHistoryState = {}
   }
 
-  public start = () => {
-    const methods: Array<keyof History> = ['pushState', 'replaceState']
-
-    const originals = {}
-    methods.forEach(method => {
-      const original = window.history[method]
-      // @ts-ignore
-      originals[method] = window.history[method]
-      // @ts-ignore
-      window.history[method] = (...args) => {
-        this.historyListener(...args)
-        original(...args)
-      }
-    })
-
-    return () => {
-      methods.forEach(method => {
-        // @ts-ignore
-        window.history[method] = originals[method]
-      })
-    }
-  }
-
-  private normalizeHistoryState = (state: HistoryState | string): StrictHistoryState => {
-    if (typeof state === 'string') {
-      // @ts-ignore
-      state = this.options.parse(state)
-    }
-    return {
-      path: state.path || this.currentHistoryState.path,
-      query: state.query || this.currentHistoryState.query,
-      hash: state.hash || this.currentHistoryState.hash
-    }
-  }
-
-  private findDelta = (oldState: StrictHistoryState, newState: StrictHistoryState): HistoryState => {
-    const delta = {}
-    Object.keys(oldState).forEach(key => {
-      // @ts-ignore
-      if (oldState[key] !== newState[key]) delta[key] = newState[key]
-    })
+  public findDelta = (
+    oldState: HistoryState,
+    newState: HistoryState
+  ): HistoryState => {
+    const delta: HistoryState = {}
+    if (oldState.path !== newState.path) delta.path = newState.path
+    if (oldState.query !== newState.query) delta.query = newState.query
+    if (oldState.hash !== newState.hash) delta.hash = newState.hash
     return delta
   }
 
-  private match = (template: string, path: string) => {
-    return template === path
-  }
-
   public navigate = (newState: HistoryState | string) => {
+    const nextState = typeof newState === 'string'
+      ? this.options.parse(newState)
+      : newState
+
     const delta = this.findDelta(
       this.currentHistoryState,
-      this.normalizeHistoryState(newState)
+      nextState
     )
 
     if (!delta.path && !delta.query && !delta.hash) return
 
     for (const { middlewares, path } of this.routes) {
-      // @ts-ignore
-      if (this.match(path, delta.path)) {
-        // @ts-ignore
+      if (delta.path && middlewares && this.options.match(path, delta.path)) {
         for (const middleware of middlewares) {
-          if (!middleware(delta)) return
+          if (!middleware(this.currentHistoryState, delta, nextState)) return
         }
       }
     }
 
+    if (delta.path && this.middlewares) {
+      for (const middleware of this.middlewares) {
+        if (!middleware(this.currentHistoryState, delta, nextState)) return
+      }
+    }
+
     const newHistoryState = Object.assign({}, this.currentHistoryState, delta)
-    // @ts-ignore
     window.history.pushState({}, '', this.options.stringify(newHistoryState))
     this.currentHistoryState = newHistoryState
   }
 
-  private historyListener = (
-    data: any = {},
-    title: string = '',
-    url?: string
-  ): boolean => {
-    return true
-  }
-
-  // @ts-ignore
-  public subscribe = (handler) => {
-    this.subscriptions.push(handler)
+  public subscribe = (handler: Middleware) => {
+    this.middlewares.push(handler)
     return () => {
-      this.subscriptions.splice(this.subscriptions.indexOf(handler), 1)
+      this.middlewares.splice(this.middlewares.indexOf(handler), 1)
     }
-  }
-
-  public stop = () => {
-    this.isWorking = false
   }
 }

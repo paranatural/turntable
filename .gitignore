@@ -1,3 +1,5 @@
+pkg
+
 # Created by .ignore support plugin (hsz.mobi)
 ### SublimeText template
 # Cache files for Sublime Text
@@ -290,4 +292,3 @@ Temporary Items
 
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
-

@@ -22,8 +22,8 @@
     "test": "npx eslint src/** && npx jest"
   },
   "dependencies": {
-    "@ghostship/core": "file:../core",
-    "@ghostship/react": "file:../react",
+    "@ghostship/core": "^0.0.2",
+    "@ghostship/react": "^0.0.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },

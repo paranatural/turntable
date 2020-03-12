@@ -1,1 +1,3 @@
-export { Ghostship, Middleware } from './ghostship'
+export {
+  Ghostship, Middleware, Options, HistoryState, Route
+} from './ghostship'
