@@ -1,6 +1,6 @@
 {
   "name": "@ghostship/core",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Extendable SPA router",
   "author": {
     "name": "unordinarity",
@@ -34,7 +34,6 @@
     "build": "pika build",
     "test": "npx eslint src/** && npx jest"
   },
-  "peerDependencies": {},
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-react": "^7.8.3",
