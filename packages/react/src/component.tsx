@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from 'react'
-// @ts-ignore
 import { Ghostship } from '@ghostship/core'
 import { ghostshipContext } from './context'
 

@@ -34,11 +34,11 @@
   ],
   "scripts": {
     "build": "pika build",
-    "format": "npx eslint src/** --fix",
-    "test": "npx jest"
+    "format": "eslint src/** --fix",
+    "test": "jest"
   },
   "peerDependencies": {
-    "@ghostship/core": "file:../core",
+    "@ghostship/core": "^0.0.5",
     "react": "^16.12.0"
   },
   "devDependencies": {

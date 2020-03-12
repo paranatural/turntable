@@ -1,1 +1,2 @@
-export { } from './hash-middleware'
+export { HashMiddleware } from './hash-middleware'
+export { LogMiddleware } from './log-middleware'

@@ -105,9 +105,9 @@ export class Ghostship {
     this.currentHistoryState = newHistoryState
   }
 
-  public subscribe = (handler: Middleware) => {
+  public subscribe = (handler: Middleware): () => void => {
     this.middlewares.push(handler)
-    return () => {
+    return (): void => {
       this.middlewares.splice(this.middlewares.indexOf(handler), 1)
     }
   }
