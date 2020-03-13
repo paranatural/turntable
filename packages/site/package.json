@@ -1,6 +1,6 @@
 {
   "name": "@ghostship/site",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "private": true,
   "scripts": {
     "build": "gatsby build",
@@ -26,9 +26,9 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "@ghostship/core": "^0.0.6",
-    "@ghostship/react": "^0.0.6",
-    "@ghostship/stdlib": "^0.0.6",
+    "@ghostship/core": "^0.0.7",
+    "@ghostship/react": "^0.0.7",
+    "@ghostship/stdlib": "^0.0.7",
     "@typescript-eslint/eslint-plugin": "^2.18.0",
     "@typescript-eslint/parser": "^2.18.0",
     "eslint": "^6.8.0",
