@@ -13,7 +13,8 @@ export type Emitter<StateType> = {
   watch: (watcher: Watcher<StateType>) => void;
   emit: (actionID: ActionId, payload: ActionPayload) => void;
   getState: () => StateType;
-  clear: () => void;
+  clearActions: () => void;
+  clearWatchers: () => void;
 }
 
 export const createEmitter = <StateType>(initialState: StateType): Emitter<StateType> => {
@@ -66,8 +67,10 @@ export const createEmitter = <StateType>(initialState: StateType): Emitter<State
     getState: (): StateType => {
       return stateCurrent
     },
-    clear: (): void => {
+    clearActions: (): void => {
       actionsMap = {}
+    },
+    clearWatchers: (): void => {
       watchersList = []
     }
   }

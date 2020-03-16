@@ -38,7 +38,7 @@
     "test": "jest"
   },
   "peerDependencies": {
-    "@ghostship/core": "^0.0.5",
+    "@ghostship/core": "^0.0.7",
     "react": "^16.12.0"
   },
   "devDependencies": {

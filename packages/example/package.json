@@ -1,0 +1,50 @@
+{
+  "name": "@ghostship/react-setup",
+  "version": "0.0.7",
+  "description": "Extendable SPA router - example site",
+  "author": {
+    "name": "unordinarity",
+    "email": "unordinarity@yandex.ru"
+  },
+  "publishConfig": {
+    "access": "public",
+    "directory": "pkg"
+  },
+  "keywords": [
+    "ghostship",
+    "react",
+    "router",
+    "routing",
+    "spa"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unordinarity/ghostship"
+  },
+  "bugs": {
+    "url": "https://github.com/unordinarity/ghostship/issues",
+    "email": "unordinarity@yandex.ru"
+  },
+  "homepage": "https://github.com/unordinarity/ghostship",
+  "files": [
+    "src",
+    "test",
+    ".eslintrc.json",
+    "LICENSE",
+    "readme.md",
+    "tsconfig.json"
+  ],
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "format": "eslint src/** --fix",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@ghostship/core": "^0.0.7",
+    "@ghostship/react": "0.0.7",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "webpack": "^4.41.5"
+  }
+}
