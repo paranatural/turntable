@@ -1,6 +1,7 @@
 {
   "name": "@ghostship/react-setup",
   "version": "0.0.7",
+  "private": true,
   "description": "Extendable SPA router - example site",
   "author": {
     "name": "unordinarity",
