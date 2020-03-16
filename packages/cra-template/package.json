@@ -1,22 +1,24 @@
 {
-  "name": "@ghostship/react-setup",
+  "name": "@ghostship/cra-template",
   "version": "0.0.7",
-  "private": true,
-  "description": "Extendable SPA router - example site",
+  "description": "Extendable SPA router - Create React App template",
   "author": {
     "name": "unordinarity",
     "email": "unordinarity@yandex.ru"
   },
   "publishConfig": {
     "access": "public",
-    "directory": "pkg"
+    "directory": "."
   },
   "keywords": [
     "ghostship",
     "react",
     "router",
     "routing",
-    "spa"
+    "spa",
+    "create-react-app",
+    "template",
+    "typescript"
   ],
   "license": "MIT",
   "repository": {
@@ -29,17 +31,16 @@
   },
   "homepage": "https://github.com/unordinarity/ghostship",
   "files": [
-    "src",
-    "test",
-    ".eslintrc.json",
-    "LICENSE",
-    "readme.md",
-    "tsconfig.json"
+    "template",
+    "template.json"
   ],
+  "main": "template.json",
+  "engines": {
+    "node": ">=8.10"
+  },
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "format": "eslint src/** --fix",
-    "test": "jest"
+    "format": "eslint template/** --fix"
   },
   "devDependencies": {
     "@ghostship/core": "^0.0.7",
