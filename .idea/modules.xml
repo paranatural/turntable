@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ghostship.iml" filepath="$PROJECT_DIR$/.idea/ghostship.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/turntable.iml" filepath="$PROJECT_DIR$/.idea/turntable.iml" />
     </modules>
   </component>
 </project>
