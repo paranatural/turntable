@@ -1,6 +1,6 @@
 {
   "name": "@ghostship/stdlib",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "Extendable SPA router - utilities collection",
   "author": {
     "name": "unordinarity",
@@ -40,7 +40,7 @@
     "@ghostship/core": "^0.0.2"
   },
   "devDependencies": {
-    "@ghostship/core": "^0.0.8",
+    "@ghostship/core": "^0.1.0",
     "@pika/pack": "^0.5.0",
     "@pika/plugin-build-node": "^0.9.2",
     "@pika/plugin-build-web": "^0.9.2",

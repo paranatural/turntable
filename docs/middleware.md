@@ -1,2 +1,0 @@
-# Ghostship middlewares
-
