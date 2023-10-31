@@ -1,7 +1,3 @@
-# @ghostship/react
+# @turntable/react
 
-React wrapper for ghostship
-
-# Docs
-
-[ghostship.now.sh](https://ghostship.now.sh)
+React adapter for Turntable (framework-agnostic flexible SPA router)

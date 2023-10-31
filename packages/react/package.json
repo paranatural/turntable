@@ -1,17 +1,13 @@
 {
-  "name": "@ghostship/react",
+  "name": "@turntable/react",
   "version": "0.1.0",
-  "description": "Extendable SPA router - react bridge",
+  "description": "React adapter for Turntable (framework-agnostic flexible SPA router)",
   "author": {
-    "name": "unordinarity",
+    "name": "Anton Medvedev",
     "email": "unordinarity@yandex.ru"
   },
-  "publishConfig": {
-    "access": "public",
-    "directory": "pkg"
-  },
   "keywords": [
-    "ghostship",
+    "turntable",
     "react",
     "router",
     "routing",
@@ -20,61 +16,25 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/unordinarity/ghostship"
+    "url": "https://github.com/paranatural/turntable.git",
+    "directory": "packages/react"
   },
-  "bugs": {
-    "url": "https://github.com/unordinarity/ghostship/issues",
-    "email": "unordinarity@yandex.ru"
-  },
-  "homepage": "https://github.com/unordinarity/ghostship",
+  "homepage": "https://github.com/paranatural/turntable",
   "files": [
-    "pkg",
-    "LICENSE",
+    "dist",
     "readme.md"
   ],
   "scripts": {
-    "build": "pika build",
-    "format": "eslint src/** --fix",
-    "test": "jest"
+    "build": "exit 0"
   },
   "peerDependencies": {
-    "@ghostship/core": "^0.0.7",
+    "@turntable/turntable": "^0.0.7",
     "react": "^16.12.0"
   },
   "devDependencies": {
-    "@ghostship/core": "^0.1.0",
-    "@pika/pack": "^0.5.0",
-    "@pika/plugin-build-node": "^0.9.2",
-    "@pika/plugin-build-web": "^0.9.2",
-    "@pika/plugin-ts-standard-pkg": "^0.9.2",
-    "@types/eslint": "^6.1.7",
+    "@turntable/turntable": "^0.1.0",
     "@types/react": "^16.9.19",
-    "@types/webpack": "^4.41.4",
-    "@typescript-eslint/eslint-plugin": "^2.18.0",
-    "@typescript-eslint/parser": "^2.18.0",
-    "eslint": "^6.8.0",
-    "eslint-config-standard-with-typescript": "^12.0.1",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
     "react": "^16.12.0",
-    "typescript": "^3.7.5",
-    "typesync": "^0.6.1",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
-  },
-  "@pika/pack": {
-    "pipeline": [
-      [
-        "@pika/plugin-ts-standard-pkg"
-      ],
-      [
-        "@pika/plugin-build-web"
-      ],
-      [
-        "@pika/plugin-build-node"
-      ]
-    ]
+    "typescript": "^3.7.5"
   }
 }

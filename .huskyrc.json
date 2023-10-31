@@ -1,6 +1,0 @@
-{
-  "hooks": {
-    "commit-msg": "npx commitlint -E HUSKY_GIT_PARAMS",
-    "pre-commit": "lerna run format"
-  }
-}

@@ -1,5 +1,4 @@
 {
-  "extends": [
-    "@commitlint/config-conventional"
-  ]
+  "extends": ["@commitlint/config-conventional"],
+  "formatter": "@commitlint/format"
 }

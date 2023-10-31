@@ -1,7 +1,3 @@
-# @ghostship/stdlib
+# @turntable/stdlib
 
-Utilities collection for ghostship
-
-# Docs
-
-[ghostship.now.sh](https://ghostship.now.sh)
+Utilities for Turntable (framework-agnostic flexible SPA router)

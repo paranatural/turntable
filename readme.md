@@ -7,13 +7,13 @@
     <h1>⬡ Turntable</h1>
 </div>
 
+[![GitHub license](https://img.shields.io/github/license/paranatural/turntable?style=flat-square)](license.md)
 ![Tests: no](https://img.shields.io/badge/tests-no-red?style=flat-square)
 ![Coverage: 146%](https://img.shields.io/badge/coverage-146%25-green?style=flat-square)
 ![Build: sometimes](https://img.shields.io/badge/build-sometimes-yellow?style=flat-square)
-[![NPM bundle size](https://img.shields.io/bundlephobia/minzip/turntable/core)](https://bundlephobia.com/result?p=@ghostship/core)
-[![GitHub license](https://img.shields.io/github/license/paranatural/panopticon?style=flat-square)](./docs/license)
-[![Malotru code style](https://img.shields.io/badge/Code_style-Malotru-red?style=flat-square)](https://github.com/unordinarity/malotru)
-[![TypeScript support](https://img.shields.io/badge/TypeScript-out--of--box-blue?style=flat-square)](https://www.typescriptlang.org/)
+[![NPM bundle size](https://img.shields.io/bundlephobia/minzip/turntable/turntable)](https://bundlephobia.com/result?p=@ghostship/core)
+[![Types support](https://img.shields.io/npm/types/turntable/turntable?style=flat-square)](https://www.npmjs.com/package/panopticon-core)
+[![Malotru code style](https://img.shields.io/badge/code_style-Malotru-red?style=flat-square)](https://github.com/unordinarity/malotru)
 
 Framework-agnostic flexible SPA router
 
@@ -81,17 +81,17 @@ ReactDom.render(
 
 # ⬡ Contribution
 
-Feel free to open an issue/discussion with request/report, but ensure you read/follow [Contributor Covenant Code of Conduct](./docs/code_of_conduct.md)
+Feel free to open an issue/discussion with request/report, but ensure you read/follow [Contributor Covenant Code of Conduct](docs/5-development/code-of-conduct.md)
 
 # ⬡ Development/History
 
 [Changelog/Past/Versions](./docs/changelog.md)
 
-[Roadmap/Future](./docs/roadmap.md)
+[Roadmap/Future](roadmap.md)
 
 # ⬡ Legal info
 
-Project licensed under [MIT License](./docs/license.md). [What it means](https://choosealicense.com/licenses/mit/)
+Project licensed under [MIT License](license.md). [What it means](https://choosealicense.com/licenses/mit/)
 
 # ⬡ Brand/Look
 

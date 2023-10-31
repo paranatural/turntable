@@ -1,7 +1,7 @@
 {
-  "name": "@turntable/stdlib",
+  "name": "@turntable/turntable",
   "version": "0.1.0",
-  "description": "Utilities for Turntable (framework-agnostic flexible SPA router)",
+  "description": "Framework-agnostic flexible SPA router",
   "author": {
     "name": "Anton Medvedev",
     "email": "unordinarity@yandex.ru"
@@ -16,7 +16,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/paranatural/turntable.git",
-    "directory": "packages/stdlib"
+    "directory": "packages/turntable"
   },
   "homepage": "https://github.com/paranatural/turntable",
   "files": [
@@ -26,11 +26,8 @@
   "scripts": {
     "build": "exit 0"
   },
-  "peerDependencies": {
-    "@turntable/turntable": "^0.0.2"
-  },
   "devDependencies": {
-    "@turntable/turntable": "^0.1.0",
+    "cross-env": "^7.0.0",
     "typescript": "^3.7.5"
   }
 }

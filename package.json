@@ -1,11 +1,25 @@
 {
-  "name": "root",
   "private": true,
-  "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
-    "husky": "^4.2.1",
-    "lerna": "^3.20.2"
+  "scripts": {
+    "prepare": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
   },
-  "version": "0.0.7"
+  "devDependencies": {
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
+    "@commitlint/format": "^18.1.0",
+    "husky": "^8.0.3",
+    "lerna": "^7.4.1",
+    "nx": "^17.0.2",
+    "pinst": "^3.0.0"
+  },
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "engines": {
+    "node": ">=18.16.0"
+  },
+  "packageManager": "yarn@1.22.19"
 }
