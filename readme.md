@@ -4,16 +4,9 @@
         <source media='(prefers-color-scheme: light)' srcset='./.github/turntable-logo-dark-160.png' />
         <img src='./.github/turntable-logo-dark-160.png' />
     </picture>
-    <h1>⬡ Turntable</h1>
 </div>
 
-[![GitHub license](https://img.shields.io/github/license/paranatural/turntable?style=flat-square)](license.md)
-![Tests: no](https://img.shields.io/badge/tests-no-red?style=flat-square)
-![Coverage: 146%](https://img.shields.io/badge/coverage-146%25-green?style=flat-square)
-![Build: sometimes](https://img.shields.io/badge/build-sometimes-yellow?style=flat-square)
-[![NPM bundle size](https://img.shields.io/bundlephobia/minzip/turntable/turntable)](https://bundlephobia.com/result?p=@ghostship/core)
-[![Types support](https://img.shields.io/npm/types/paranatural/turntable?style=flat-square)](https://www.npmjs.com/package/panopticon-core)
-[![Malotru code style](https://img.shields.io/badge/code_style-Malotru-red?style=flat-square)](https://github.com/unordinarity/malotru)
+# ⬡ Turntable
 
 Framework-agnostic flexible SPA router
 
