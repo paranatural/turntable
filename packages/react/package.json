@@ -1,6 +1,6 @@
 {
-  "name": "@turntable/react",
-  "version": "0.1.0",
+  "name": "@paranatural/turntable-react",
+  "version": "0.0.0",
   "description": "React adapter for Turntable (framework-agnostic flexible SPA router)",
   "author": {
     "name": "Anton Medvedev",
@@ -28,11 +28,11 @@
     "build": "exit 0"
   },
   "peerDependencies": {
-    "@turntable/turntable": "^0.0.7",
+    "@paranatural/turntable": "^0.0.0",
     "react": "^16.12.0"
   },
   "devDependencies": {
-    "@turntable/turntable": "^0.1.0",
+    "@paranatural/turntable": "^0.0.0",
     "@types/react": "^16.9.19",
     "react": "^16.12.0",
     "typescript": "^3.7.5"

@@ -2,33 +2,33 @@
 
 Versioned roadmap with technical details
 
-## 0.2 (initial build)
+## 0.1 (initial build)
 
-- @panopticon/panopticon: well-defined API
-- @panopticon/panopticon: stable build
-- @panopticon/panopticon: stable run on examples
+- @paranatural/panopticon: well-defined API
+- @paranatural/panopticon: stable build
+- @paranatural/panopticon: stable run on examples
 - no typescript errors and warnings
 - fresh dependencies
 
-## 0.3 (no-controller rework)
+## 0.2 (no-controller rework)
 
 - remove controller and rework route to be main library unit
 - make typing and plugins for new route-centric system
 
-## 0.4 (spa mvp)
+## 0.3 (spa mvp)
 
 - browser plugin implementation
 - browser plugin tests
 - options config for classic browser spa
 - some examples
 
-## 0.5 (ecosystem)
+## 0.4 (ecosystem)
 
 - documentation for core package
 - plugins implementation
 - plugins tests
 
-## 0.6 (react)
+## 0.5 (react)
 
 - react plugin
 - react renderer
@@ -36,26 +36,26 @@ Versioned roadmap with technical details
 - cra-template
 - react examples
 
-## 0.7 (documentation)
+## 0.6 (documentation)
 
 - readme
 - docs/quick-start
 - docs/configuration
 - docs/api
 
-## 0.8 (maintenance)
+## 0.7 (maintenance)
 
 - code quality metrics (loc, bundle size, coverage, todo/fixme counters, etc)
 - ci/cd pipeline
 - issue and pr review
 - find beta-testers
 
-## 0.9 (website)
+## 0.8 (website)
 
 - documentation site
 - site and ci/cd integration
 
-## 0.10 (pre-release polishing)
+## 0.9 (pre-release polishing)
 
 - grammar review for all texts
 

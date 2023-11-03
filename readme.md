@@ -12,7 +12,7 @@
 ![Coverage: 146%](https://img.shields.io/badge/coverage-146%25-green?style=flat-square)
 ![Build: sometimes](https://img.shields.io/badge/build-sometimes-yellow?style=flat-square)
 [![NPM bundle size](https://img.shields.io/bundlephobia/minzip/turntable/turntable)](https://bundlephobia.com/result?p=@ghostship/core)
-[![Types support](https://img.shields.io/npm/types/turntable/turntable?style=flat-square)](https://www.npmjs.com/package/panopticon-core)
+[![Types support](https://img.shields.io/npm/types/paranatural/turntable?style=flat-square)](https://www.npmjs.com/package/panopticon-core)
 [![Malotru code style](https://img.shields.io/badge/code_style-Malotru-red?style=flat-square)](https://github.com/unordinarity/malotru)
 
 Framework-agnostic flexible SPA router
@@ -25,22 +25,21 @@ There are plenty of client-side routing libraries, but all of them aren't really
 
 - Expandable with [middlewares](./docs/middleware.md)
 - Written in [TypeScript](https://github.com/microsoft/TypeScript)
-- Zero-dependency
 - Batteries included (in a separate [package](./packages/stdlib), but it's officially supported)
-- Really lightweight [(<3kb min+gzip)](https://bundlephobia.com/result?p=@ghostship/core)
+- Really lightweight [(<3kb min+gzip)](https://bundlephobia.com/result?p=@paranatural/turntable)
 
 # ⬡ Installation
 
 ```shell
-npm i @turntable/turntable @turntable/stdlib @turntable/react
+npm i @paranatural/turntable @paranatural/turntable-stdlib @paranatural/turntable-react
 ```
 
 ```shell
-yarn add @turntable/turntable @turntable/stdlib @turntable/react
+yarn add @paranatural/turntable @paranatural/turntable-stdlib @paranatural/turntable-react
 ```
 
 ```shell
-pnpm add @turntable/turntable @turntable/stdlib @turntable/react
+pnpm add @paranatural/turntable @paranatural/turntable-stdlib @paranatural/turntable-react
 ```
 
 # ⬡ Usage/Utilizing/Enjoyment

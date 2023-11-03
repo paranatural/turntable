@@ -1,6 +1,6 @@
 {
-  "name": "@turntable/stdlib",
-  "version": "0.1.0",
+  "name": "@paranatural/turntable-stdlib",
+  "version": "0.0.0",
   "description": "Utilities for Turntable (framework-agnostic flexible SPA router)",
   "author": {
     "name": "Anton Medvedev",
@@ -27,10 +27,10 @@
     "build": "exit 0"
   },
   "peerDependencies": {
-    "@turntable/turntable": "^0.0.2"
+    "@paranatural/turntable": "^0.0.0"
   },
   "devDependencies": {
-    "@turntable/turntable": "^0.1.0",
+    "@paranatural/turntable": "^0.0.0",
     "typescript": "^3.7.5"
   }
 }

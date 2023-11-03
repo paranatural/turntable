@@ -1,12 +1,13 @@
 {
-  "name": "@turntable/turntable",
-  "version": "0.1.0",
+  "name": "@paranatural/turntable",
+  "version": "0.0.0",
   "description": "Framework-agnostic flexible SPA router",
   "author": {
     "name": "Anton Medvedev",
     "email": "unordinarity@yandex.ru"
   },
   "keywords": [
+    "paranatural",
     "turntable",
     "router",
     "routing",

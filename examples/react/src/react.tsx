@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Navigator } from '@turntable/turntable'
+import { Route, Navigator } from '@paranatural/turntable'
 
 const HomePage = () => (
   <>
