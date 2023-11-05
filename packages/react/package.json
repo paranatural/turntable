@@ -26,7 +26,13 @@
     "readme.md"
   ],
   "scripts": {
-    "build": "exit 0"
+    "develop": "exit 0",
+    "format": "exit 0",
+    "lint": "exit 0",
+    "typecheck": "tsc --noEmit",
+    "test": "exit 0",
+    "build": "rollup -c rollup.config.js",
+    "clean": "rimraf dist"
   },
   "peerDependencies": {
     "@paranatural/turntable": "^0.0.0",
@@ -34,8 +40,14 @@
   },
   "devDependencies": {
     "@paranatural/turntable": "^0.0.0",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/node": "^18.18.7",
     "@types/react": "^16.9.19",
     "react": "^16.12.0",
-    "typescript": "^3.7.5"
+    "read-pkg-up": "^11.0.0",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.1.5",
+    "rollup-plugin-dts": "^6.1.0",
+    "typescript": "^5.2.2"
   }
 }
